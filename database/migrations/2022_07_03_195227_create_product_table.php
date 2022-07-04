@@ -29,7 +29,8 @@ return new class extends Migration
             $table->boolean('is_archive')
                 ->default(false);
 
-            //Добавить индексы
+            $table->index('name','IDX_PRODUCT_NAME');
+            $table->index('price', 'IDX_PRODUCT_PRICE');
         });
     }
 

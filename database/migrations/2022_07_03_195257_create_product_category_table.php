@@ -28,6 +28,7 @@ return new class extends Migration
                 ->on('category')
                 ->onDelete('cascade');
 
+            $table->unique(['product_id', 'category_id'], 'UNQ_IDX_PRODUCT_ID_CATEGORY_ID');
         });
     }
 
